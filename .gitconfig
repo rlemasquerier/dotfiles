@@ -1,0 +1,22 @@
+[user]
+       name = Rodolphe Lemasquerier
+       email = rodolphe.lemasquerier@gmail.com
+[push]
+       default = current
+[alias]
+       g = git
+       cm = commit -m
+       ap = add -p
+       st = status
+       rc = rebase --continue
+       ri = rebase -i
+       co = checkout
+       #lg = log -M --decorate --graph
+       pur = pull --rebase
+  frebase = "!f() { git log --pretty=oneline | fzf | awk '{print $1}' | xargs -o git rebase -i; }; f"
+  autofixup = "!f() { COMMIT=$(git log --pretty=oneline | fzf | awk '{print $1}'); git commit --fixup $COMMIT; GIT_SEQUENCE_EDITOR=: git rebase --autostash --autosquash -i $COMMIT^; }; f"
+       fco = "!f() { git branch -a --sort=-committerdate | fzf | sed 's/remotes\\/origin\\///' | xargs -o git checkout; }; f"
+  lg = log --pretty=oneline
+  fsa = "!f() { git stash list | fzf | sed 's/.*\\(stash@{[0-9]*}\\).*/\\1/' | xargs -o git stash apply; }; f"
+[credential]
+	helper = osxkeychain
