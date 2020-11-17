@@ -107,11 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -146,6 +141,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias rnse="react-native run-ios --simulator 'iPhone SE'"
+alias rnip="yarn react-native run-ios --scheme AppRestaurant-Staging --simulator='iPad Pro (9.7-inch)'"
 alias git-clean="git branch --merged | grep -v '*' | xargs git branch -D"
 alias config='/usr/bin/git --git-dir=/Users/rlemas/.git_dotfiles/ --work-tree=/Users/rlemas'
 alias gap="git add -p"
@@ -155,6 +151,7 @@ alias gcm="git commit -m"
 alias gst="git status"
 alias glg="git lg"
 alias gpf="git push --force-with-lease"
+alias gcp="git cherry-pick"
 alias studio="/Applications/'Android Studio.app'/Contents/MacOS/studio"
 alias gs="git stash"
 alias y="yarn"
@@ -185,3 +182,7 @@ BASE16_SHELL="$HOME/.vim_runtime/misc/base16-shell"
 
 base16_isotope
 source ~/.vim_runtime/misc/base16-fzf/bash/base16-isotope.config
+
+# fnm
+export PATH=/Users/rlemas/.fnm:$PATH
+eval "`fnm env`"
