@@ -129,7 +129,10 @@ export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
 export PATH="$PATH:/Users/rlemas/Tools/Easimulator"
 
 # JAVA HOME path used by Android Studio (and thus react-native run-android)
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+# doesnt work ?
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/home"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
