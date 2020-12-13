@@ -2,57 +2,43 @@ local log = hs.logger.new('main', 'info')
 DEVELOPING_THIS = false -- set to true to ease debugging
 
 HYPER = {'ctrl', 'shift', 'alt', 'cmd'}
+LUNETTE_DEFAULT = {"cmd", "alt"}
 
 -- App bindings
 function setUpAppBindings()
   hyperFocusAll('w', 'React Native Debugger', 'Simulator', 'qemu-system-x86_64')
   hyperFocusOrOpen('n', 'Notes')
-  hyperFocus(';', 'Code')
+  hyperFocus('c', 'Code')
   hyperFocusOrOpen('a', 'Android Studio')
   hyperFocusOrOpen('x', 'Xcode')
-  hyperFocusOrOpen('f', 'Finder')
+  hyperFocusOrOpen('space', 'Finder')
   hyperFocusOrOpen('s', 'Slack')
   hyperFocusOrOpen('t', 'iTerm')
-  hyperFocus('c', 'Google Chrome')
+  hyperFocusOrOpen('g', 'Google Chrome')
 end
 
 -- Window management
 function setUpWindowManagement()
-  hs.window.animationDuration = 0 -- disable animations
-  hs.grid.setMargins({0, 0})
-  hs.grid.setGrid('2x2')
+  hs.loadSpoon("Lunette")
 
-  function mkSetFocus(to)
-    return function() hs.grid.set(hs.window.focusedWindow(), to) end
-  end
+  customBindings = {
+    leftHalf = {
+      {HYPER, "left"},
+      {LUNETTE_DEFAULT, "left"},
+    },
+    rightHalf = {
+      {HYPER, "right"},
+      {LUNETTE_DEFAULT, "right"},
+    },
+    fullScreen = {
+      {HYPER, "f"},
+      {LUNETTE_DEFAULT, "f"},
+    }
+  }
+  
+  spoon.Lunette:bindHotkeys(customBindings)
 
-  local fullScreen = hs.geometry("0,0 2x2")
-  local leftHalf = hs.geometry("0,0 1x2")
-  local rightHalf = hs.geometry("1,0 1x2")
-  local upperLeft = hs.geometry("0,0 1x1")
-  local lowerLeft = hs.geometry("0,1 1x1")
-  local upperRight = hs.geometry("1,0 1x1")
-  local lowerRight = hs.geometry("1,1 1x1")
-
-  hs.hotkey.bind(HYPER, 'l', mkSetFocus(fullScreen))
-  hs.hotkey.bind(HYPER, 'h', mkSetFocus(leftHalf))
-  hs.hotkey.bind(HYPER, "'", mkSetFocus(rightHalf))
-  hs.hotkey.bind(HYPER, "y", mkSetFocus(upperLeft))
-  hs.hotkey.bind(HYPER, "b", mkSetFocus(lowerLeft))
-  hs.hotkey.bind(HYPER, "u", mkSetFocus(upperRight))
-  hs.hotkey.bind(HYPER, "n", mkSetFocus(lowerRight))
-
-  hs.hotkey.bind(HYPER, "up", hs.window.filter.focusNorth)
-  hs.hotkey.bind(HYPER, "down", hs.window.filter.focusSouth)
-  hs.hotkey.bind(HYPER, "left", hs.window.filter.focusWest)
-  hs.hotkey.bind(HYPER, "right", hs.window.filter.focusEast)
-  -- hs.hotkey.bind(HYPER, "v", hs.window.filter.focusNorth)
-  -- hs.hotkey.bind(HYPER, "c", hs.window.filter.focusSouth)
-  -- hs.hotkey.bind(HYPER, "j", hs.window.filter.focusWest)
-  -- hs.hotkey.bind(HYPER, "p", hs.window.filter.focusEast)
   hs.hotkey.bind(HYPER, "q", hs.hints.windowHints)
-  -- HYPER "d" -- Bound in Karabiner to Cmd+Tab (application switcher)
-  -- HYPER "k" -- Bound in Karabiner to Cmd+` (next window of application)
 
   -- throw to other screen
   hs.hotkey.bind(HYPER, 'o', function()
