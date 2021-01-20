@@ -160,6 +160,9 @@ alias gs="git stash"
 alias y="yarn"
 alias cpcommit="git log -1 | head -1 | cut -c 8- | pbcopy"
 
+# ZB VPN
+alias vpn="sudo openfortivpn -c ~/Tools/openfortivpn/config"
+
 # project specific
 alias deployIosSdk="cd SdkGeneration && yarn sdk:generate:debug && .. && git add . && gcm "build and deploy" && git push && cpcommit && notif "ios sdk is built" "And the last commit is copied""
 

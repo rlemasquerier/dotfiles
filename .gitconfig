@@ -1,6 +1,6 @@
 [user]
        name = Rodolphe Lemasquerier
-       email = rodolphe.lemasquerier@gmail.com
+	email = rodolphe.lemasquerier@gmail.com
 [push]
        default = current
 [alias]
@@ -20,3 +20,5 @@
   fsa = "!f() { git stash list | fzf | sed 's/.*\\(stash@{[0-9]*}\\).*/\\1/' | xargs -o git stash apply; }; f"
 [credential]
 	helper = osxkeychain
+[core]
+	autocrlf = input
