@@ -143,8 +143,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias rnse="react-native run-ios --simulator 'iPhone SE'"
-alias rnip="yarn react-native run-ios --scheme AppRestaurant-Staging --simulator='iPad Pro (9.7-inch)'"
+alias rna="yarn react-native run-android"
+alias rni="yarn react-native run-ios"
 alias git-clean="git branch --merged | grep -v '*' | xargs git branch -D"
 alias config='/usr/bin/git --git-dir=/Users/rlemas/.git_dotfiles/ --work-tree=/Users/rlemas'
 alias gap="git add -p"
@@ -192,3 +192,20 @@ source ~/.vim_runtime/misc/base16-fzf/bash/base16-isotope.config
 # fnm
 export PATH=/Users/rlemas/.fnm:$PATH
 eval "`fnm env`"
+
+export PATH="/var/folders/k6/0h1zc3dd0q76h6c_0js7646r0000gn/T/fnm_multishell_16375_1612448813466/bin":$PATH
+export FNM_MULTISHELL_PATH="/var/folders/k6/0h1zc3dd0q76h6c_0js7646r0000gn/T/fnm_multishell_16375_1612448813466"
+export FNM_DIR="/Users/rlemas/.fnm"
+export FNM_LOGLEVEL="info"
+export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
+autoload -U add-zsh-hook
+_fnm_autoload_hook () {
+    if [[ -f .node-version && -r .node-version ]]; then
+        fnm use
+    elif [[ -f .nvmrc && -r .nvmrc ]]; then
+        fnm use
+    fi
+}
+
+add-zsh-hook chpwd _fnm_autoload_hook \
+    && _fnm_autoload_hook
