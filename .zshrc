@@ -166,6 +166,10 @@ alias vpn="sudo openfortivpn -c ~/Tools/openfortivpn/config"
 # project specific
 alias deployIosSdk="cd SdkGeneration && yarn sdk:generate:debug && .. && git add . && gcm "build and deploy" && git push && cpcommit && notif "ios sdk is built" "And the last commit is copied""
 
+# Set timezone 
+# Can be useful to run tests when working abroad
+export TZ='Europe/Paris'
+
 notif() {
   osascript -e "display notification \"$2\" with title \"$1\""
 }
