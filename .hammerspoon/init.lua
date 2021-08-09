@@ -8,13 +8,14 @@ LUNETTE_DEFAULT = {"cmd", "alt"}
 function setUpAppBindings()
   hyperFocusAll('w', 'React Native Debugger', 'Simulator', 'qemu-system-x86_64')
   hyperFocusOrOpen('n', 'Notes')
-  hyperFocus('c', 'Code')
+  hyperFocusOrOpen('c', 'Code')
   hyperFocusOrOpen('a', 'Android Studio')
   hyperFocusOrOpen('x', 'Xcode')
   hyperFocusOrOpen('space', 'Finder')
   hyperFocusOrOpen('s', 'Slack')
   hyperFocusOrOpen('t', 'iTerm')
   hyperFocusOrOpen('g', 'Google Chrome')
+  hyperFocusOrOpen('m', 'Spotify')
 end
 
 -- Window management
