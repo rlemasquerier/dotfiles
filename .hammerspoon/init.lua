@@ -6,7 +6,7 @@ LUNETTE_DEFAULT = {"cmd", "alt"}
 
 -- App bindings
 function setUpAppBindings()
-  hyperFocusAll('w', 'React Native Debugger', 'Simulator', 'qemu-system-x86_64')
+  hyperFocusOrOpen('i', 'Simulator')
   hyperFocusOrOpen('n', 'Notes')
   hyperFocusOrOpen('c', 'Code')
   hyperFocusOrOpen('a', 'Android Studio')
