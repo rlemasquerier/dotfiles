@@ -20,3 +20,5 @@
        lg = log --pretty=oneline
        fsa = "!f() { git stash list | fzf | sed 's/.*\\(stash@{[0-9]*}\\).*/\\1/' | xargs -o git stash apply; }; f"
 
+[push]
+	default = current
