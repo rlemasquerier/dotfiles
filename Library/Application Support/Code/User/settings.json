@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "Night Owl (No Italics)",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.wrapTabs": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+}
