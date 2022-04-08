@@ -6,4 +6,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    "editor.formatOnSave": true,
+    "ruby.rubocop.executePath": "/Users/rodolphe/.rbenv/shims/",
+    "ruby.format": "rubocop",
+    "ruby.rubocop.onSave": true,
 }
