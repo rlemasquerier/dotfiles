@@ -181,3 +181,45 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+skl_ec2_ip() {
+    name=$1
+    num_instance=$2
+
+    usage="Usage: ${0} <ec2_tag_name>"
+
+    if [[ -z ${num_instance} ]]; then
+        num_instance=1
+    fi
+
+    if [[ ${num_instance} -lt 1 ]]; then
+        echo "Invalid num instance. ${usage}"
+        return 1
+    fi
+
+    ((num_instance=num_instance-1))
+
+    if [[ ${name} == *"-prod" ]]; then
+        profile="skl-prod"
+    elif [[ ${name} == *"-stag" ]]; then
+        profile="skl-staging"
+    else
+        echo "Invalid env. ${usage}"
+        return 1
+    fi
+
+    ip=$(aws ec2 describe-instances         --query "Reservations[${num_instance}].Instances[0].PrivateIpAddress"         --filters "Name=tag:Name,Values=${name}" "Name=instance-state-name,Values=running"         --profile ${profile}         | tr -d \" | tr -d null)
+
+    if [[ ${ip} == '' ]]; then
+        echo "no ip"
+        return 1;
+    fi
+
+    echo "${ip}"
+    return 0
+}
+
+_skl_ec2_ips () {
+  compadd skelloApp-clock-stag skelloApp-puma-stag skelloApp-sidekiq-stag svcBilling-puma-stag svcBitly-stag svcCommunication-puma-stag svcDocument-puma-stag svcPlanning-celery-stag svcPlanning-flask-stag skelloApp-clock-stag skelloApp-puma-stag skelloApp-sidekiq-stag svcBilling-puma-stag svcBitly-prod svcCommunication-puma-stag svcDocument-puma-stag svcPlanning-celery-stag svcPlanning-flask-stag
+}
+
+compdef _skl_ec2_ips skl_ec2_ip
