@@ -1,19 +1,19 @@
 {
-    "workbench.colorTheme": "Night Owl (No Italics)",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.wrapTabs": true,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "editor.formatOnSave": true,
-    "ruby.rubocop.executePath": "/Users/rodolphe/.rbenv/shims/",
-    "ruby.format": "rubocop",
-    "ruby.rubocop.onSave": true,
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.inlineSuggest.enabled": true,
-    "window.zoomLevel": 1,
-    "editor.gotoLocation.multipleDefinitions": "goto"
+  "workbench.colorTheme": "Night Owl (No Italics)",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.wrapTabs": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "ruby.rubocop.executePath": "/Users/rodolphe/.rbenv/shims/",
+  "ruby.format": "rubocop",
+  "ruby.rubocop.onSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "window.zoomLevel": 1
 }
