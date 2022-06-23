@@ -7,6 +7,8 @@
     "source.fixAll.eslint": true
   },
   "editor.formatOnSave": true,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "ruby.rubocop.executePath": "/Users/rodolphe/.rbenv/shims/",
   "ruby.format": "rubocop",
   "ruby.rubocop.onSave": true,
@@ -15,5 +17,9 @@
   },
   "editor.inlineSuggest.enabled": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
-  "window.zoomLevel": 1
+  "vsicons.dontShowNewVersionMessage": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

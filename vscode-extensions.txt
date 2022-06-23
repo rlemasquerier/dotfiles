@@ -1,0 +1,17 @@
+To generate liste :
+code --list-extensions > xxx.txt
+
+castwide.solargraph
+dbaeumer.vscode-eslint
+eamodio.gitlens
+esbenp.prettier-vscode
+GitHub.copilot
+misogi.ruby-rubocop
+naumovs.color-highlight
+rebornix.ruby
+sdras.night-owl
+tlent.jest-snapshot-language-support
+vscode-icons-team.vscode-icons
+Vue.volar
+waderyan.gitblame
+wingrunr21.vscode-ruby
