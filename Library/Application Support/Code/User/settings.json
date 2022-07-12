@@ -4,7 +4,8 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.wrapTabs": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.rubocop": true
   },
   "editor.formatOnSave": true,
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
@@ -21,5 +22,8 @@
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  }
 }
