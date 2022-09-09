@@ -237,3 +237,6 @@ fshow() {
     done < <(sed '1d;s/^[^a-z0-9]*//;/^$/d' <<< "$out" | awk '{print $1}')
   done
 }
+
+source /Users/rodolphe/Skello/devops/skl_aws.zsh
+source /Users/rodolphe/Skello/devops/skl_review_apps.zsh

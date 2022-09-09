@@ -7,7 +7,6 @@
     "source.fixAll.eslint": true,
     "source.fixAll.rubocop": true
   },
-  "editor.formatOnSave": true,
   "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "ruby.rubocop.executePath": "/Users/rodolphe/.rbenv/shims/",
@@ -25,5 +24,6 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "[ruby]": {
     "editor.defaultFormatter": "misogi.ruby-rubocop"
-  }
+  },
+  "git.mergeEditor": false,
 }
