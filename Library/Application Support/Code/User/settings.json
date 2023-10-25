@@ -21,9 +21,15 @@
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsdk": "${workspaceFolder}/node_modules/typescript/lib",
   "[ruby]": {
     "editor.defaultFormatter": "misogi.ruby-rubocop"
   },
   "git.mergeEditor": false,
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "git.autofetch": true,
+  "githubPullRequests.pullBranch": "never",
+  "diffEditor.ignoreTrimWhitespace": false
 }

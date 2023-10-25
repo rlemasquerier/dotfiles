@@ -124,6 +124,9 @@ alias y="yarn"
 alias cpcommit="git log -1 | head -1 | cut -c 8- | pbcopy"
 alias rails="bundle exec rails"
 alias config='/usr/local/bin/git --git-dir=/Users/rodolphe/.mydotfiles.cfg/ --work-tree=/Users/rodolphe'
+alias pbemail="echo 'rodolphe.lemasquerier.ext@skello.io' | pbcopy"
+alias pbadmin="echo 'rodolphe.lemasquerier.ext+admin@skello.io' | pbcopy"
+alias emulator="~/Library/Android/sdk/emulator/emulator"
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -240,3 +243,12 @@ fshow() {
 
 source /Users/rodolphe/Skello/devops/skl_aws.zsh
 source /Users/rodolphe/Skello/devops/skl_review_apps.zsh
+source /Users/rodolphe/Skello/devops/skello.plugin.zsh
+
+# pnpm
+export PNPM_HOME="/Users/rodolphe/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

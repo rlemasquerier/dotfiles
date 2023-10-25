@@ -1,11 +1,11 @@
-To generate liste :
-code --list-extensions > xxx.txt
-
 castwide.solargraph
 dbaeumer.vscode-eslint
 eamodio.gitlens
 esbenp.prettier-vscode
 GitHub.copilot
+GitHub.copilot-chat
+GitHub.vscode-pull-request-github
+mariomatheu.syntax-project-pbxproj
 misogi.ruby-rubocop
 naumovs.color-highlight
 rebornix.ruby
@@ -15,3 +15,4 @@ vscode-icons-team.vscode-icons
 Vue.volar
 waderyan.gitblame
 wingrunr21.vscode-ruby
+yoavbls.pretty-ts-errors
