@@ -75,6 +75,7 @@ ZSH_THEME="spaceship"
 plugins=(
     git
     zsh-autosuggestions
+    z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -135,3 +136,14 @@ source ~/.config/base16-shell/scripts/base16-isotope.sh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$PATH:/Users/rodolphel/Tools/flutter/bin"
+
+if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
+  export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
