@@ -101,6 +101,7 @@ alias wip="git add -A . && git commit -m 'WIP'"
 alias cpcommit="git log -1 | head -1 | cut -c 8- | pbcopy"
 alias config='/usr/bin/git --git-dir=/Users/rodolphel/.git_dotfiles/ --work-tree=/Users/rodolphel'
 alias emulator="~/Library/Android/sdk/emulator/emulator"
+alias adb="~/Library/Android/sdk/platform-tools/adb"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
