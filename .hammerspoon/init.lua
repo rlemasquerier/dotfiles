@@ -4,6 +4,17 @@ DEVELOPING_THIS = false -- set to true to ease debugging
 HYPER = {'ctrl', 'shift', 'alt', 'cmd'}
 LUNETTE_DEFAULT = {"cmd", "alt"}
 
+-- Custom bindings
+function setUpCustomScriptsBindings()
+  hs.hotkey.bind(HYPER, 'e', function()
+    local command = "echo 'rodolphe.l@campus.coach' | tr -d '\n' | pbcopy"
+    local output, status, exitType, rc = hs.execute(command)
+    if not status then
+      hs.alert.show("Command failed with exit code: " .. tostring(rc))
+    end
+  end)
+end
+
 -- App bindings
 function setUpAppBindings()
   hyperFocusOrOpen('i', 'Simulator')
@@ -121,6 +132,7 @@ end
 -- Main
 
 maybeEnableDebug()
+setUpCustomScriptsBindings()
 setUpAppBindings()
 setUpWindowManagement()
 -- setUpClipboardTool()

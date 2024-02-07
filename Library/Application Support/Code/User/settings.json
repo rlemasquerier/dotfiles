@@ -33,6 +33,7 @@
         "editor.selectionHighlight": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": "off"
-    }
+        "editor.wordBasedSuggestions": "off",
+    },
+    "dart.showTodos": false
 }
