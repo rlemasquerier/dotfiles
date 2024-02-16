@@ -35,5 +35,6 @@
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": "off",
     },
-    "dart.showTodos": false
+    "dart.showTodos": false,
+    "dart.runPubGetOnPubspecChanges": "never",
 }
