@@ -151,3 +151,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # export TZ='Europe/Paris'
 export TZ='America/Montreal'
+# flashlight
+export PATH="/Users/rodolphel/.flashlight/bin:$PATH"
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
