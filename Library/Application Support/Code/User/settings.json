@@ -37,4 +37,9 @@
     },
     "dart.showTodos": false,
     "dart.runPubGetOnPubspecChanges": "never",
+    "monkeyC.developerKeyPath": "/Users/rodolphel/Dev/developer_key",
+    "dart.debugExternalPackageLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "githubPullRequests.pullBranch": "never",
+    "github.copilot.editor.enableAutoCompletions": true,
 }
