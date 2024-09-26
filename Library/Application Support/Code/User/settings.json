@@ -42,4 +42,5 @@
     "dart.debugSdkLibraries": false,
     "githubPullRequests.pullBranch": "never",
     "github.copilot.editor.enableAutoCompletions": true,
+    "editor.hover.delay": 1000,
 }
