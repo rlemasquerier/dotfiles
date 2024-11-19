@@ -43,4 +43,7 @@
     "githubPullRequests.pullBranch": "never",
     "github.copilot.editor.enableAutoCompletions": true,
     "editor.hover.delay": 1000,
+    "CodeGPT.apiKey": "Anthropic",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.accessibilitySupport": "off",
 }
